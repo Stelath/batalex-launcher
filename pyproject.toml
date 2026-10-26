@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "batalex-launcher"
+version = "0.1.0"
+description = "An Apple TV-style application launcher and screensaver for Linux (and other Qt platforms)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "batalex" }]
+dependencies = [
+    "PySide6>=6.6",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+batalex-launcher = "batalex_launcher.__main__:main"
+
+[tool.setuptools]
+packages = ["batalex_launcher"]
